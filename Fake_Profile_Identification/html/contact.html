@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact: Fake Profile Identification</title>
+    <script
+      src="https://kit.fontawesome.com/0e53af926d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body id="colour">
+    <header class="header">
+        <h1 class="myH1">FPI.</h1>
+        <ul class="header-nav">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+            <span class="user"><i class="fa-regular fa-user"></i></span>
+        </ul>
+    </header>
+    <div id="contactForm">
+        <form name="submit-to-google-sheet">
+            <h2 class="cu">Contact Us</h2>
+            <p>Please share if you have any Queries!!</p>
+            <label for="fname">First Name:</label>
+            <br>
+            <input type="text" id="fname" name="firstName" placeholder="First Name..." required>
+            <br>
+            <label for="lname">Last Name:</label>
+            <br>
+            <input type="text" id="lname" name="lastName" placeholder="Last Name..." required>
+            <br>
+            <label for="email">Email:</label>
+            <br>
+            <input type="email" id="email" name="email" placeholder="Your Email..." required>
+            <br>
+            <label for="msg">Message:</label>
+            <br>
+            <textarea name="message" id="msg" placeholder="Enter Your Message..." rows="5" cols="10"></textarea>
+            <br>
+            <button class="btn">Submit</button>
+        </form>
+    </div>
+    <footer>
+        <p>With lots of ❤️ from our team, &copy; 2025. </p>
+    </footer>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzE5Qt11bLacCjbSRvbKJtsvxp41Zz-PHThsnEgw8761KIkwFstQk6ynTZ_876o5P0R-g/exec'
+        const form = document.forms['submit-to-google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Your response is reached"))
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+    <script src="../script.js"></script>
+</body>
+</html>

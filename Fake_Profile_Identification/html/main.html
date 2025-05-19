@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Details: Fake Profile Identification</title>
+    <script
+      src="https://kit.fontawesome.com/0e53af926d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body id="colour">
+    <header class="header">
+        <h1 class="myH1">FPI.</h1>
+        <ul class="header-nav">
+            <li><a href="home.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <span class="user"><i class="fa-regular fa-user"></i></span>
+        </ul>
+    </header>
+        <form id="profileForm">
+            <h1 class="fpi">Fake Profile Identification</h1>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="followers">Number of Followers:</label>
+            <input type="number" id="followers" name="followers" required>
+
+            <label for="following">Number of Following:</label>
+            <input type="number" id="following" name="following" required>
+
+            <label for="posts">Number of Posts:</label>
+            <input type="number" id="posts" name="posts" required>
+
+            <label for="bioLength">Bio Length:</label>
+            <input type="number" id="bioLength" name="bioLength" required>
+
+            <button type="submit" class="btn">Check Profile</button>
+            <div id="result" class="result" style="display: none;">
+                <h2>Result:</h2>
+                <p id="prediction"></p>
+            </div>
+        </form>
+
+        <footer>
+            <p>With lots of ❤️ from our team, &copy; 2025. </p>
+        </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
